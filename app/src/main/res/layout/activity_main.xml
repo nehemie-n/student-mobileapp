@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/student_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_credit_card_black_24dp"
+        android:hint="Tap Student ID Card" />
+
+    <EditText
+        android:id="@+id/student_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+        android:hint="Student Name" />
+
+    <EditText
+        android:id="@+id/student_pass"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/student_email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:drawableLeft="@drawable/ic_email_black_24dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_accessibility_black_24dp"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:padding="10dp"
+                android:text="Gender"
+                android:textSize="18dp" />
+
+            <RadioGroup
+                android:id="@+id/student_gender"
+                android:layout_width="match_parent"
+                android:drawableLeft="@android:drawable/ic_menu_search"
+                android:text="Gender"
+                android:orientation="horizontal"
+                android:layout_height="55dp" >
+
+                <RadioButton
+                    android:id="@+id/gender_male"
+                    android:layout_width="91dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:checked="false"
+                    android:text="Male"
+                    android:textSize="14dp" />
+
+                <RadioButton
+                    android:id="@+id/gender_female"
+                    android:layout_width="185dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.13"
+                    android:checked="false"
+                    android:text="Female"
+                    android:textSize="14dp" />
+            </RadioGroup>
+        </TableRow>
+    </TableLayout>
+
+
+    <Spinner
+        android:id="@+id/student_dep"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:contentDescription="@string/departments"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:entries="@array/departments"
+        android:hint="@string/departments"
+        android:prompt="@string/departments" />
+
+    <Spinner
+        android:id="@+id/student_sess"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:entries="@array/sessions"
+        android:prompt="@string/sessions" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAlignment="center">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow>
+
+                <Button
+                    android:id="@+id/save_btn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="save"
+                    android:text="Save" />
+
+                <Button
+                    android:id="@+id/read_btn"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="148dp"
+                    android:layout_height="wrap_content"
+                    android:onClick="readEntries"
+                    android:text="Read" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FormativeOne</string>
+
+    <string name="departments">Department</string>
+    <string-array name="departments">
+        <item>Department</item>
+        <item>Dep 1</item>
+        <item>Dep 2</item>
+    </string-array>
+
+    <string name="sessions">Department</string>
+    <string-array name="sessions">
+        <item>Session</item>
+        <item>Session 1</item>
+        <item>Session 2</item>
+    </string-array>
+    <string name="title_activity_show">ActivityShow</string>
+</resources>
